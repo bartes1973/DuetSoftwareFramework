@@ -334,6 +334,8 @@ Since it relies on a [model subscription](#model-subscriptions), it gives an ide
 Of course you can build everything on your own, too. In order to build packages like those on the package feed, check out the `build.sh` script in the `pkg` directory.
 If you wish to make changes to the existing software and to test it, you need to get the [.NET Core 3.x SDK](https://dotnet.microsoft.com/download/dotnet-core) first.
 
+If you wish to build everything using Visual Studio 2019 under Windows, then in addition to installing .NET Core 3.1 SDK you must go to Tools->NuGet Package Manager, search for System.IO.Pipelines, select project DuetWebServer and the latest package version, and press Install.
+
 #### 3.1 Building on a remote system
 
 Every .NET Core application of DSF is references the `DotnetPublishSsh` package which allows you to compile and upload .NET Core applications for ARMv7/AArch64.
@@ -368,7 +370,7 @@ If you do not wish to publish everything to your board at the time of compiling,
 
 ### 3.2 Building on the SBC itself
 
-Of course you can compile the required components on the SBC itself. Once the .NET Core SDK has been installed, enter the directory of the DSF appliction you want to compile and run `dotnet build`. This will generate suitable binaries for you.
+Of course you can compile the required components on the SBC itself. Once the .NET Core SDK has been installed, enter the directory of the DSF application you want to compile and run `dotnet build`. This will generate suitable binaries for you.
 
 ## API
 

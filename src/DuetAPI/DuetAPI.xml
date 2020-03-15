@@ -37,7 +37,7 @@
             Code channel for serial devices (e.g. PanelDue)
             </summary>
         </member>
-        <member name="F:DuetAPI.CodeChannel.Daemon">
+        <member name="F:DuetAPI.CodeChannel.Trigger">
             <summary>
             Code channel for running triggers or config.g
             </summary>
@@ -55,6 +55,11 @@
         <member name="F:DuetAPI.CodeChannel.SPI">
             <summary>
             Default code channel for requests over SPI
+            </summary>
+        </member>
+        <member name="F:DuetAPI.CodeChannel.Daemon">
+            <summary>
+            Code channel that executes the deamon process
             </summary>
         </member>
         <member name="F:DuetAPI.CodeChannel.AutoPause">
@@ -1358,9 +1363,9 @@
             G/M/T-code channel for AUX (UART/PanelDue)
             </summary>
         </member>
-        <member name="P:DuetAPI.Machine.Channels.Daemon">
+        <member name="P:DuetAPI.Machine.Channels.Trigger">
             <summary>
-            G/M/T-code channel for Daemon (deals with config.g and triggers)
+            G/M/T-code channel for Trigger (deals with config.g and triggers)
             </summary>
         </member>
         <member name="P:DuetAPI.Machine.Channels.CodeQueue">
@@ -1376,6 +1381,11 @@
         <member name="P:DuetAPI.Machine.Channels.SPI">
             <summary>
             Default G/M/T-code channel for generic codes
+            </summary>
+        </member>
+        <member name="P:DuetAPI.Machine.Channels.Daemon">
+            <summary>
+            GM/T-code chanel for the daemon task
             </summary>
         </member>
         <member name="P:DuetAPI.Machine.Channels.AutoPause">

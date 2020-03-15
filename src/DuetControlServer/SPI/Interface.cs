@@ -147,8 +147,8 @@ namespace DuetControlServer.SPI
                 }
             }
 
-            _logger.Warn("Failed to find an idle channel, using fallback {0}", nameof(CodeChannel.Daemon));
-            return CodeChannel.Daemon;
+            _logger.Warn("Failed to find an idle channel, using fallback {0}", nameof(CodeChannel.Trigger));
+            return CodeChannel.Trigger;
         }
 
         /// <summary>

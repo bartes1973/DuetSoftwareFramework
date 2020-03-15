@@ -41,9 +41,9 @@ namespace DuetAPI.Machine
         public Channel AUX { get; private set; } = new Channel();
 
         /// <summary>
-        /// G/M/T-code channel for Daemon (deals with config.g and triggers)
+        /// G/M/T-code channel for Trigger (deals with config.g and triggers)
         /// </summary>
-        public Channel Daemon { get; private set; } = new Channel();
+        public Channel Trigger { get; private set; } = new Channel();
 
         /// <summary>
         /// G/M/T-code channel for the code queue
@@ -59,6 +59,11 @@ namespace DuetAPI.Machine
         /// Default G/M/T-code channel for generic codes
         /// </summary>
         public Channel SPI { get; private set; } = new Channel();
+
+        /// <summary>
+        /// GM/T-code chanel for the daemon task
+        /// </summary>
+        public Channel Daemon { get; private set; } = new Channel();
 
         /// <summary>
         /// GM/T-code chanel for auto pause events
@@ -82,9 +87,10 @@ namespace DuetAPI.Machine
                     CodeChannel.File => File,
                     CodeChannel.USB => USB,
                     CodeChannel.AUX => AUX,
-                    CodeChannel.Daemon => Daemon,
+                    CodeChannel.Trigger => Trigger,
                     CodeChannel.CodeQueue => CodeQueue,
                     CodeChannel.LCD => LCD,
+                    CodeChannel.Daemon => Daemon,
                     CodeChannel.AutoPause => AutoPause,
                     _ => SPI,
                 };
@@ -113,7 +119,7 @@ namespace DuetAPI.Machine
             File.Assign(other.File);
             USB.Assign(other.USB);
             AUX.Assign(other.AUX);
-            Daemon.Assign(other.Daemon);
+            Trigger.Assign(other.Trigger);
             CodeQueue.Assign(other.CodeQueue);
             LCD.Assign(other.LCD);
             SPI.Assign(other.SPI);
@@ -133,7 +139,7 @@ namespace DuetAPI.Machine
                 File = (Channel)File.Clone(),
                 USB = (Channel)USB.Clone(),
                 AUX = (Channel)AUX.Clone(),
-                Daemon = (Channel)Daemon.Clone(),
+                Trigger = (Channel)Trigger.Clone(),
                 CodeQueue = (Channel)CodeQueue.Clone(),
                 LCD = (Channel)LCD.Clone(),
                 SPI = (Channel)SPI.Clone(),

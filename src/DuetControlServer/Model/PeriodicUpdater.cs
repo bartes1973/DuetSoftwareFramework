@@ -46,7 +46,7 @@ namespace DuetControlServer.Model
                     Code code = new Code
                     {
                         InternallyProcessed = true,
-                        Channel = DuetAPI.CodeChannel.Daemon,
+                        Channel = DuetAPI.CodeChannel.Trigger,
                         Type = CodeType.MCode,
                         MajorNumber = 905
                     };

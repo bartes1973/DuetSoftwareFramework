@@ -89,9 +89,10 @@ namespace DuetControlServer.Model
         public static void Init()
         {
             Provider.Get.Channels.AutoPause.PropertyChanged += PropertyChanged("channels", "autoPause");
+            Provider.Get.Channels.Daemon.PropertyChanged += PropertyChanged("channels", "daemon");
             Provider.Get.Channels.AUX.PropertyChanged += PropertyChanged("channels", "aux");
             Provider.Get.Channels.CodeQueue.PropertyChanged += PropertyChanged("channels", "codeQueue");
-            Provider.Get.Channels.Daemon.PropertyChanged += PropertyChanged("channels", "daemon");
+            Provider.Get.Channels.Trigger.PropertyChanged += PropertyChanged("channels", "trigger");
             Provider.Get.Channels.File.PropertyChanged += PropertyChanged("channels", "file");
             Provider.Get.Channels.HTTP.PropertyChanged += PropertyChanged("channels", "http");
             Provider.Get.Channels.LCD.PropertyChanged += PropertyChanged("channels", "lcd");

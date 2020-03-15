@@ -67,6 +67,26 @@ namespace DuetControlServer
         public const string FilamentsFile = "filaments.csv";
 
         /// <summary>
+        /// Fallback file if the probe-specific deploy probe file could not be found
+        /// </summary>
+        public const string DeployProbeFallbackFile = "deployprobe.g";
+
+        /// <summary>
+        /// Fallback file if the probe-specific retract probe file could not be found
+        /// </summary>
+        public const string RetractProbeFallbackFile = "retractprobe.g";
+
+        /// <summary>
+        /// Probe-specific deploy file name pattern
+        /// </summary>
+        public static Regex DeployProbePattern = new Regex("deployprobe\\d+.g");
+
+        /// <summary>
+        /// Probe-specific retract file name pattern
+        /// </summary>
+        public static Regex RetractProbePattern = new Regex("retractprobe\\d+.g");
+
+        /// <summary>
         /// Resolve a RepRapFirmware/FatFs-style file path to a physical file path asynchronously.
         /// The first drive (0:/) is reserved for usage with the base directory as specified in the settings
         /// </summary>

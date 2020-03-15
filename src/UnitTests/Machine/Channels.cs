@@ -16,7 +16,7 @@ namespace UnitTests.Machine
             original.Channels.File.Feedrate = 565F;
             original.Channels.CodeQueue.UsingInches = true;
             original.Channels.HTTP.RelativeExtrusion = true;
-            original.Channels.Daemon.Feedrate = 45F;
+            original.Channels.Trigger.Feedrate = 45F;
             original.Channels[DuetAPI.CodeChannel.Telnet].StackDepth = 5;
             original.Channels.LCD.LineNumber = 45;
             original.Channels.AUX.VolumetricExtrusion = true;
@@ -29,7 +29,7 @@ namespace UnitTests.Machine
             Assert.AreEqual(original.Channels.File.Feedrate, clone.Channels.File.Feedrate);
             Assert.AreEqual(original.Channels.CodeQueue.UsingInches, clone.Channels.CodeQueue.UsingInches);
             Assert.AreEqual(original.Channels.HTTP.RelativePositioning, clone.Channels.HTTP.RelativePositioning);
-            Assert.AreEqual(original.Channels.Daemon.Feedrate, clone.Channels.Daemon.Feedrate);
+            Assert.AreEqual(original.Channels.Trigger.Feedrate, clone.Channels.Trigger.Feedrate);
             Assert.AreEqual(original.Channels.Telnet.StackDepth, clone.Channels.Telnet.StackDepth);
             Assert.AreEqual(original.Channels.LCD.LineNumber, clone.Channels.LCD.LineNumber);
             Assert.AreEqual(original.Channels.AUX.VolumetricExtrusion, clone.Channels.AUX.VolumetricExtrusion);
@@ -46,7 +46,7 @@ namespace UnitTests.Machine
             original.Channels.File.Feedrate = 565F;
             original.Channels.CodeQueue.UsingInches = true;
             original.Channels.HTTP.RelativeExtrusion = true;
-            original.Channels.Daemon.Feedrate = 45F;
+            original.Channels.Trigger.Feedrate = 45F;
             original.Channels[DuetAPI.CodeChannel.Telnet].StackDepth = 5;
             original.Channels.LCD.LineNumber = 45;
             original.Channels.AUX.VolumetricExtrusion = true;
@@ -60,7 +60,7 @@ namespace UnitTests.Machine
             Assert.AreEqual(original.Channels.File.Feedrate, assigned.Channels.File.Feedrate);
             Assert.AreEqual(original.Channels.CodeQueue.UsingInches, assigned.Channels.CodeQueue.UsingInches);
             Assert.AreEqual(original.Channels.HTTP.RelativePositioning, assigned.Channels.HTTP.RelativePositioning);
-            Assert.AreEqual(original.Channels.Daemon.Feedrate, assigned.Channels.Daemon.Feedrate);
+            Assert.AreEqual(original.Channels.Trigger.Feedrate, assigned.Channels.Trigger.Feedrate);
             Assert.AreEqual(original.Channels.Telnet.StackDepth, assigned.Channels.Telnet.StackDepth);
             Assert.AreEqual(original.Channels.LCD.LineNumber, assigned.Channels.LCD.LineNumber);
             Assert.AreEqual(original.Channels.AUX.VolumetricExtrusion, assigned.Channels.AUX.VolumetricExtrusion);
