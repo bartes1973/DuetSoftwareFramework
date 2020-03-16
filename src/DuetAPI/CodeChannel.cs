@@ -54,7 +54,7 @@
         SPI = 8,
 
         /// <summary>
-        /// Code channel that executes the deamon process
+        /// Code channel that executes the daemon process
         /// </summary>
         Daemon = 9,
 

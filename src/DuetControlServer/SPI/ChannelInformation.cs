@@ -552,9 +552,13 @@ namespace DuetControlServer.SPI
                         _logger.Info($"Optional macro files {filename} and {FilePath.RetractProbeFallbackFile} not found");
                     }
                 }
-                else
+                else if (filename != FilePath.DaemonFile)
                 {
                     _logger.Info("Optional macro file {0} not found", filename);
+                }
+                else
+                {
+                    _logger.Trace("Optional macro file {0} not found", filename);
                 }
 
                 if (!found)
